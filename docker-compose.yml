@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    php:
+        image: php:7.3-apache
+        ports:
+          - 8000:80
+        command: php -S localhost:8000 -t ./public
+        volumes:
+            - ./:/var/www/html/
